@@ -1,0 +1,176 @@
+console.log(count);
+	console.log('bomb function');
+	let bombDiv = document.createElement('div');
+	bombDiv.classList.add('bomb');
+	bombImg.appendChild(bombDiv);
+	let x = Math.random()*1024;
+	x = Math.ceil(x);
+	var mar = document.getElementsByClassName('bomb');
+	mar[count].style.top = '0px';
+	mar[count].style.left = x+'px';
+	// var divTop = mar[count];
+	count+=1;
+	if(t==1){
+
+		clearInterval(t);
+	}
+	var pos = 0;
+	clearInterval(moveInterval);
+	moveInterval = setInterval(frame, 10);
+	// frame();
+	
+	function frame() {
+		for(let i=0;i<100;i++){
+	
+			console.log('Hello amigo');
+			if (pos == 800) {
+				clearInterval(moveInterval);
+			} else {
+				pos++; 
+				mar[count].style.top = pos+'px'; 
+		  }
+		//  clearTime = setTimeout(startGame,10);
+		}
+	}
+
+
+----------------------------------------------------------------------
+<not working trying new>
+var pos = 0;
+  if (moveInterval) {
+    clearInterval(moveInterval);
+  }
+  console.log('bomb function : '+pos);
+  moveInterval = setInterval(frame, 10, count);
+  count += 1;
+  sgc = setTimeout(startGame,1000);
+  function frame(c) {
+	  // console.log('the vlaue of count is : ' +c);
+    if (pos == 400) {
+      clearInterval(moveInterval);
+    } else {
+      pos++;
+      mar[c].style.top = pos + "px";
+    }
+  }
+
+
+
+
+
+
+  
+
+						   550
+  -------------------------------------------------
+                            |  (-60)
+  min 550		555			|
+  max 670				 610| (mid=120)
+				615		|
+							|  (+60)
+  -------------------------------------------------
+				675		    670
+  
+  
+  
+  
+  
+  
+  
+  <Not working>
+  bombImg.addEventListener('click', function(e){
+    if(e.target.className == 'explosion') {
+      var bombImg=e.target.parentElement;
+      bombImg.remove();
+    }
+  }
+
+
+
+
+
+// function hitTarget(topValue, leftValue) {
+//   let arrayIndex = 0;
+//   console.log("height:" + height + " x:" + x);
+//   let topArray = [];
+//   for (let i = topValue - 60; i <= topValue + 60; i++) {
+//     topArray[arrayIndex] = i;
+//     arrayIndex++;
+//   }
+
+//   // console.log(topArray);
+//   // let check = newTop;
+//   // console.log(check)
+//   // let s = topArray.includes(check,0);
+  
+//   if (bombClassProperty.classList.contains("explosion")) {
+//     if (topArray.includes(newTop)) {
+//       document.getElementsByTagName("li")[0].style.display = "none";
+//       console.log("hit");
+//     }
+//   }
+// } //ending of hitTarget
+
+
+
+ 
+ 
+ 
+ 
+ --------------------------------------------------------------------------------
+ // function isCollide(a, b,c) {
+//   var aRect = a.getBoundingClientRect();
+//   var bRect = b[c].getBoundingClientRect();
+
+//   let result = !(
+//     ((aRect.top + aRect.height) < (bRect.top)) ||
+//     (aRect.top > (bRect.top + bRect.height)) ||
+//     ((aRect.left + aRect.width) < bRect.left) ||
+//     (aRect.left > (bRect.left + bRect.width))
+//     );
+//   console.log(result);
+//   if (result){
+//     //  bombClassProperty[count].style.display = "none"
+//     document.getElementsByTagName("li")[life].style.display = "none";
+//     alert("you lose one life");
+//     life++;
+
+//   }
+
+// }
+--------------------------------------------------------------------------------------
+ 
+ // ((di1.top + di1.height) < (di2.top)) ||
+    //     (di1.top > (di2.top + di2.height)) ||
+    //     ((di1.left + di1.width) < di2.left) ||
+    //     (di1.left > (di2.left + di2.width))
+    //     );
+
+-------------------------------------------------------------------------------
+ 
+ 
+ 
+ // var rect = div2[c].getClientRects();
+  // let afterContent = window.getComputedStyle(div2[c],'::after');
+  // let beforeContent = window.getComputedStyle(div2[c],'::before');
+  // console.log(afterContent.width);
+
+  //   var top = rect.top + window.pageYOffset - document.documentElement.clientTop;
+  //  var left = rect.left + window.pageXOffset - document.documentElement.clientLeft;
+  //  top += parseInt(pseudoStyle.top,10);
+  //  console.log(top);
+
+  [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+ 
+ |----------------------------------------------------------
+ |															|1024
+ |												|800
+ |												}		|
+ |												}			|
+ |															|
+ |															|	
+ |---------------------------------------------------------
+ 
+  //SOlUTION FOR MY TODO
+create a function and start doing the rest 
+and if it works then it will be fruitful doing js

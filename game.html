@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Skadoosh</title>
+		<link rel="stylesheet" href="game.css" />
+		
+	</head>
+
+	<body>
+		<!-- <img src="./images/bomb1.png" alt="" id="bomb"> -->
+		<div class="hud">
+			<ul class="health">
+				<li></li>  
+				<li></li>
+				<li></li>
+			</ul>
+			<div id="score">
+				<h1>Score: <span id="point"></span></h1> 
+			</div>
+		</div>
+
+		<div class="start" onclick="myLoadFunction()">
+			Start
+		</div>
+
+		<div class="sky">
+			<!-- <div class="bomb"></div> -->
+		</div>
+
+
+		<div id="player" class="character stand down">
+			<div class="head">
+			</div>
+
+			<div class="body">
+			</div>
+
+			<div class="weapon bow">
+			</div>
+		</div>
+		<div id="levelDiv">
+			<h1>Level <span id='levelDivID'></span></h1>
+		</div>
+		<div class="container">
+			<h1>Game Over</h1>
+			<input type="text" id="nameScore" placeholder="Enter Your Name...">
+			<button id="setItemBtn">Save</button>
+		</div>
+
+		<script src="game.js"></script>
+	</body>
+</html>
